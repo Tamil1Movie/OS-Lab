@@ -1,0 +1,19 @@
+Salad
+Sandwich
+Bread
+Fish.
+Shrimp.
+Rice.
+Spaghetti
+Pizza
+Hamburger
+Eggs
+Cheese
+Apple Juice
+Grape Juice
+Milk
+Candy
+Cookie
+Pie
+Cake
+Cupcake
