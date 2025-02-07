@@ -3,6 +3,8 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+int global_var = 10;
+
 int main() {
     pid_t pid;
     pid = fork();
@@ -13,13 +15,13 @@ int main() {
     }
 
     if (pid == 0) {
-        printf("Child Process: My PID is %d\n", getpid());
+        global_var -= 5;
+        printf("Child Process: Global variable value = %d\n", global_var);
     } else {
-        printf("Parent Process: My child's PID is %d\n", pid);
         wait(NULL);
+        global_var += 5;
+        printf("Parent Process: Global variable value = %d\n", global_var);
     }
-
-    printf("Process with PID %d is running the same program\n", getpid());
 
     return 0;
 }
